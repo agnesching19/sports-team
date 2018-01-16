@@ -19,11 +19,9 @@ class TeamsController < ApplicationController
   end
 
   def edit
-    @team = team.find(params[:id])
   end
 
   def show
-    @team = team.find(params[:id])
   end
 
   def update

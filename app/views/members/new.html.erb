@@ -1,0 +1,11 @@
+<div class='container'>
+  <h1>New Member</h1>
+  <%= simple_form_for [@team, @member] do |f| %>
+    <%= f.input :name %>
+    <%= f.input :position %>
+    <%= f.input :phone %>
+    <%= f.input :email %>
+    <%= f.submit 'Add', class: 'btn btn-primary' %>
+  <% end %>
+</div>
+
