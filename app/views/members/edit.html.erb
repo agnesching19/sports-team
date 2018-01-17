@@ -1,5 +1,5 @@
 <div class="container">
-  <h1>Edit <%= @member.name %></h1>
+  <h1>Edit [ <%= @member.name.upcase %> ]</h1>
   <%= simple_form_for [@team, @member] do |f| %>
     <%= f.input :name %>
     <%= f.input :position %>
@@ -7,5 +7,5 @@
     <%= f.input :email %>
     <%= f.submit 'Update', class: 'btn btn-primary' %>
   <% end %>
-  <%= link_to 'Back', team_member_path(@member) %>
+  <%= link_to 'Back', team_member_path(@team, @member) %>
 </div>

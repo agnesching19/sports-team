@@ -6,10 +6,14 @@
 
   <ul class="list-unstyled cards">
     <% @teams.each do |team| %>
-      <div class="card">
+      <div class='card'>
         <li>
-          <div class="card-description">
-            <%= team.name %>
+          <div class="team-name">
+            <p><%= team.name %></p>
+          </div>
+          <div class='team-link'>
+            <%= link_to 'Edit', edit_team_path(team), class: "btn btn-primary btn-team" %>
+            <%= link_to 'Delete', team_path(team), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-primary btn-team" %></td>
           </div>
         </li>
       </div>

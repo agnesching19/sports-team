@@ -1,6 +1,6 @@
 class MembersController < ApplicationController
-  before_action :set_member, only: [:show, :edit, :update, :destroy]
-  before_action :set_team
+  before_action :set_member, only: [:show, :edit, :update]
+  before_action :set_team, only: [:new, :create, :index, :destroy, :update]
 
   def index
     @members = Member.all
@@ -21,12 +21,11 @@ class MembersController < ApplicationController
   end
 
   def edit
-    @member = Member.find(params[:id])
+    # @team = Team.find(params[:team_id])
     @member.team = @team
   end
 
   def show
-    @member = Member.find(params[:id])
     @member.team = @team
   end
 
@@ -39,8 +38,10 @@ class MembersController < ApplicationController
   end
 
   def destroy
+    @member = Member.find(params[:id])
+    @member.team = @team
     @member.destroy
-    redirect_to members_path
+    redirect_to team_path(@team)
   end
 
   private
