@@ -6,8 +6,8 @@
 
   <ul class="list-unstyled cards">
     <% @teams.each do |team| %>
-
       <div class='card'>
+        <%= link_to "", team_path(team) %>
         <li>
           <div class="team-name">
             <p><%= link_to team.name, team_path(team) %></p>
