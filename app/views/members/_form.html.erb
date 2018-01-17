@@ -1,0 +1,7 @@
+<%= simple_form_for [@team, @member] do |f| %>
+  <%= f.input :name %>
+  <%= f.input :position %>
+  <%= f.input :phone %>
+  <%= f.input :email %>
+  <%= f.submit 'Save', class: 'btn btn-primary' %>
+<% end %>

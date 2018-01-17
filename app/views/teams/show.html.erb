@@ -28,7 +28,7 @@
           <td><%= member.email %></td>
           <td><%= link_to 'Show', team_member_path(@team, member), class: "btn btn-link" %></td>
           <td><%= link_to 'Edit', edit_team_member_path(@team, member), class: "btn btn-link" %></td>
-          <td><%= link_to 'Delete', team_member_path(@team, member), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-primary btn-team" %></td></td>
+          <td><%= link_to 'Delete', team_member_path(@team, member), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-primary btn-team" %></td>
         </tr>
       <% end %>
     </tbody>
