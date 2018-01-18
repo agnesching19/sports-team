@@ -22,7 +22,7 @@
     <tbody>
       <% @team.members.order(name: :asc).each do |member| %>
         <tr>
-          <td><%= member.name.upcase %></td>
+          <td><%= member.name %></td>
           <td><%= member.position %></td>
           <td><%= member.phone %></td>
           <td><%= member.email %></td>
