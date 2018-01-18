@@ -29,7 +29,6 @@ class MembersController < ApplicationController
   end
 
   def update
-    @member.team = @team
     if @member.update(member_params)
       redirect_to team_member_path(@member)
     else
@@ -54,6 +53,6 @@ class MembersController < ApplicationController
   end
 
   def member_params
-    params.require(:member).permit(:name, :position, :phone, :email)
+    params.require(:member).permit(:name, :position, :phone, :email, :team_id)
   end
 end
