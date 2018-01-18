@@ -16,7 +16,7 @@
     </thead>
 
     <tbody>
-      <% @members.order(name: :asc).each do |member| %>
+      <% @team.members.order(name: :asc).each do |member| %>
         <tr>
           <td><%= member.name.upcase %></td>
           <td><%= member.position %></td>

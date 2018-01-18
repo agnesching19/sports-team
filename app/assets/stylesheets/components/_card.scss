@@ -10,7 +10,7 @@
   margin: 10px;
   box-shadow: 10px 10px 10px rgba(0,0,0,0.3);
   transition: all 0.3s ease;
-  height: 100px;
+  height: 120px;
   width: 400px;
   word-break: break-all;
 }
@@ -29,5 +29,7 @@
 }
 
 .btn-team {
+  background: $red;
+  border: 0;
   border-radius: 5px;
 }
