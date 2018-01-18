@@ -27,17 +27,17 @@ def members(number)
   puts "--- creating #{number} members ---"
   number.times {
     team_id = Team.all.ids.sample
-    name = Faker::Name.name,
-    position = ['Centre-back', 'Sweeper', 'Full-back', 'Wing-back', 'Centre midfield', 'Defensive midfield', 'Attacking midfield', 'Wide midfield', 'Centre forward', 'Second striker', 'Winger'].sample,
+    name = Faker::Name.name
+    position = ['Centre-back', 'Sweeper', 'Full-back', 'Wing-back', 'Centre midfield', 'Defensive midfield', 'Attacking midfield', 'Wide midfield', 'Centre forward', 'Second striker', 'Winger'].sample
     phone = Faker::PhoneNumber.cell_phone
     email = Faker::Internet.email
 
     Member.create!({
       team_id: team_id,
-      name: name,
-      position: position,
-      phone: phone,
-      email: email
+      name: Faker::Name.name,
+      position: ['Centre-back', 'Sweeper', 'Full-back', 'Wing-back', 'Centre midfield', 'Defensive midfield', 'Attacking midfield', 'Wide midfield', 'Centre forward', 'Second striker', 'Winger'].sample,
+      phone: Faker::PhoneNumber.cell_phone,
+      email: Faker::Internet.email
     })
     sleep(2)
   }
