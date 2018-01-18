@@ -13,6 +13,7 @@
             <p><%= link_to team.name, team_path(team) %></p>
           </div>
           <div class='team-link'>
+            <%= link_to 'View', team_members_path(team), class: "btn btn-primary btn-team" %>
             <%= link_to 'Edit', edit_team_path(team), class: "btn btn-primary btn-team" %>
             <%= link_to 'Delete', team_path(team), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-primary btn-team" %></td>
           </div>
