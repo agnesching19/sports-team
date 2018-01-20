@@ -3,3 +3,5 @@
   <%= render 'form' %>
   <%= link_to 'Back', team_path(@team) %>
 </div>
+
+<%= content_for(:title, 'TEAM UP | Edit ' + @member.name) %>

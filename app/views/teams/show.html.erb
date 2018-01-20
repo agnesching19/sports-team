@@ -40,3 +40,5 @@
     <%= link_to 'Back to Team List', teams_path, class: "btn btn-info" %>
   </div>
 </div>
+
+<%= content_for(:title, 'TEAM UP | ' + @team.name) %>
