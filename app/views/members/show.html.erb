@@ -1,7 +1,24 @@
 <div class='container'>
   <h2><strong><%= @member.name.upcase %></strong></h2>
-  <h3>Position: <%= @member.position %></h3>
-  <h3>Mobile Number: <%= @member.phone %></h3>
-  <h3>Email: <%= @member.email %></h3>
-  <%= link_to 'Back', @team, class: "btn btn-primary" %>
+  <br>
+  <table>
+    <tbody>
+      <tr>
+        <td><h3><i class="fa fa-street-view" aria-hidden="true"></i></h3></td>
+        <td><h3><%= @member.position %></h3></td>
+      </tr>
+      <tr>
+        <td><h3><i class="fa fa-mobile" aria-hidden="true"></i></h3></td>
+        <td><h3><%= @member.phone %></h3></td>
+      </tr>
+      <tr>
+        <td><h3><i class="fa fa-envelope-o" aria-hidden="true"></i></h3></td>
+        <td><h3><%= @member.email %></h3></td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="show-team-links">
+    <%= link_to 'Back', @team, class: "btn btn-primary" %>
+  </div>
 </div>
+
