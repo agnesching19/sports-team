@@ -34,7 +34,9 @@
     </tbody>
   </table>
 
-  <%= link_to 'Add New Member', new_team_member_path(@team), class: "btn btn-info" %>
-  <%= link_to 'Edit Team Name', edit_team_path(@team), class: "btn btn-info" %>
-  <%= link_to 'Back to Team List', teams_path, class: "btn btn-info" %>
+  <div class="show-team-links">
+    <%= link_to 'Add New Member', new_team_member_path(@team), class: "btn btn-info" %>
+    <%= link_to 'Edit Team Name', edit_team_path(@team), class: "btn btn-info" %>
+    <%= link_to 'Back to Team List', teams_path, class: "btn btn-info" %>
+  </div>
 </div>

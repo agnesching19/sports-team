@@ -1,9 +1,7 @@
 <div class='container'>
-  <h2>- <strong><%= @member.name.upcase %></strong> -</h2>
+  <h2><strong><%= @member.name.upcase %></strong></h2>
   <h3>Position: <%= @member.position %></h3>
   <h3>Mobile Number: <%= @member.phone %></h3>
   <h3>Email: <%= @member.email %></h3>
   <%= link_to 'Back', @team, class: "btn btn-primary" %>
 </div>
-
-
