@@ -9,8 +9,12 @@
   <!-- search bar -->
   <div class='navbar-right'>
     <div class="search">
-      <%= form_tag(teams_path, method: :get) do |f| %>
-        <%= text_field_tag :query, nil, placeholder: 'Enter Phone Number', class: 'search-box' %>
+      <%= form_tag teams_path, method: :get do %>
+        <%= text_field_tag :query,
+          params[:query],
+          placeholder: 'Enter Phone Number',
+          class: 'search-box'
+        %>
         <button class="btn btn-default btn-search" %>
           SEARCH
         </button>
