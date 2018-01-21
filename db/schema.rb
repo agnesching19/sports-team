@@ -12,12 +12,15 @@
 
 ActiveRecord::Schema.define(version: 20180116100732) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "members", force: :cascade do |t|
     t.string "name"
     t.string "phone"
     t.string "position"
     t.string "email"
-    t.integer "team_id"
+    t.bigint "team_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["team_id"], name: "index_members_on_team_id"
@@ -29,4 +32,5 @@ ActiveRecord::Schema.define(version: 20180116100732) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "members", "teams"
 end
