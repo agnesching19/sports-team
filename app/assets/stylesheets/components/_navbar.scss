@@ -20,6 +20,7 @@
 
 /* Basic navbar item */
 .navbar-add {
+  color: $blue;
   cursor: pointer;
   text-align: right;
   margin-top: 8px;
@@ -28,6 +29,9 @@
   border-width: 1px;
   padding: 5px;
   border-radius: 4px;
+}
+.navbar-add:hover {
+  background: $blue;
 }
 
 /* Search bar */
@@ -38,6 +42,7 @@
   padding-right: 5px;
 }
 .btn-search {
+  color: $green;
   cursor: pointer;
   text-align: right;
   border: medium groove $green;
@@ -46,6 +51,10 @@
   border-radius: 4px;
   font-size: 14px;
   margin-bottom: 6px;
+}
+.btn-search:hover {
+  color: white;
+  background: $green;
 }
 .search-box {
   padding: 8px;
@@ -60,10 +69,10 @@
 
 /* Navbar link */
 .navbar-link {
-  color: $link;
+  color: $blue;
   font-size: 14px;
 }
 .navbar-link:hover {
-  color: $link-hover;
+  color: white;
   text-decoration: none;
 }
