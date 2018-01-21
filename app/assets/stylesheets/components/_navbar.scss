@@ -3,7 +3,7 @@
   box-shadow: 0 1px 5px 0 rgba(0,0,0,0.07),0 1px 0 0 rgba(0,0,0,0.03);
   background: #f8f9fa;
   transition: all 0.3s ease;
-  height: 60px;
+  height: 65px;
   width: 100%;
   justify-content: space-between;
 }
@@ -19,19 +19,51 @@
 }
 
 /* Basic navbar item */
-.navbar-item {
+.navbar-add {
   cursor: pointer;
   text-align: right;
+  margin-top: 8px;
+  margin-right: 30px;
+  border: medium groove $blue;
+  border-width: 1px;
+  padding: 5px;
+  border-radius: 4px;
+}
+
+/* Search bar */
+.search {
+  font-size: 15px;
+  margin-left: 155px;
   margin-top: 15px;
-  margin-right: 50px;
+  padding-right: 5px;
+}
+.btn-search {
+  cursor: pointer;
+  text-align: right;
+  border: medium groove $green;
+  border-width: 1px;
+  padding: 8px;
+  border-radius: 4px;
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+.search-box {
+  padding: 8px;
+}
+
+/* Navbar right */
+.navbar-right {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 /* Navbar link */
 .navbar-link {
-  color: #616668;
+  color: $link;
   font-size: 14px;
 }
 .navbar-link:hover {
-  color: #da552f;
+  color: $link-hover;
   text-decoration: none;
 }

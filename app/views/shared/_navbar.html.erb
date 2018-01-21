@@ -6,8 +6,20 @@
     <% end %>
   </div>
 
+  <!-- search bar -->
+  <div class='navbar-right'>
+    <div class="search">
+      <%= form_tag(teams_path, method: :get) do |f| %>
+        <%= text_field_tag :query, nil, placeholder: 'Enter Phone Number', class: 'search-box' %>
+        <button class="btn btn-default btn-search" %>
+          SEARCH
+        </button>
+      <% end %>
+    </div>
+
   <!-- Add a new team -->
-  <div class="navbar-item">
-      <%= link_to "ADD A TEAM", new_team_path, class: "navbar-link" %>
+    <div class='navbar-add'>
+      <%= link_to "ADD TEAM", new_team_path, class: "navbar-link" %>
+    </div>
   </div>
 </div>
