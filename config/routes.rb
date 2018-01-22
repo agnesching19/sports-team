@@ -3,10 +3,8 @@ Rails.application.routes.draw do
 
   resources :teams do
     resources :members
-    resources :positions, only: [:index, :show]
+    resources :positions
   end
 
-  get '/positions/new', to: 'positions#new'
-  post '/positions', to: 'positions#create'
   root to: "teams#index"
 end
