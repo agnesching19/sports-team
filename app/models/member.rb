@@ -1,6 +1,6 @@
 class Member < ApplicationRecord
   belongs_to :team
-  has_many :positions
+  has_one :position, through: :team
 
   include PgSearch
   pg_search_scope :global_search,

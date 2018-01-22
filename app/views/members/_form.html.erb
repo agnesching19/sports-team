@@ -1,6 +1,6 @@
 <%= simple_form_for [@team, @member] do |f| %>
   <%= f.input :name %>
-  <%= f.input :position_id, collection: @positions %>
+  <%= f.input :positions, collection: @positions %>
   <%= f.input :phone %>
   <%= f.input :email %>
   <%= f.submit 'Save', class: 'btn btn-primary' %>

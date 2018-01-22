@@ -44,7 +44,7 @@ class PositionsController < ApplicationController
   private
 
   def position_params
-    params.require(:position).permit(:name)
+    params.require(:position).permit(:name, :team_id)
   end
 
   def set_position
