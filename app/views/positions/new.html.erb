@@ -1,4 +1,6 @@
-<%= simple_form_for (@position) do |f| %>
-  <%= f.input :name %>
-  <%= f.submit 'Save', class: 'btn btn-primary' %>
-<% end %>
+<div class="container">
+  <h1>New Position</h1>
+  <%= render 'form' %>
+</div>
+
+<%= content_for(:title, 'Add Position | TEAM UP') %>
