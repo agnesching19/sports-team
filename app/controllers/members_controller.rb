@@ -21,6 +21,8 @@ class MembersController < ApplicationController
   end
 
   def edit
+    @positions = Position.all
+    # @member.position = @position
   end
 
   def show
